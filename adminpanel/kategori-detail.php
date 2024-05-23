@@ -80,9 +80,9 @@
 
         if($dataCount>0){
             ?>
-                 <div class="alert alert-primary mt-3" role="alert">
+                 <div class="alert alert-warning mt-3" role="alert">
         Categories cannot be deleted because they are already used in the product
-        </div>
+                </div>
             <?php
             die ();
         }
@@ -90,11 +90,11 @@
         $queryDelete = mysqli_query($con, "DELETE FROM kategori WHERE id='$id'");
         
         if($queryDelete){
-    ?>
+        ?>
 
-        <div class="alert alert-primary mt-3" role="alert">
-        Category Successfully Deleted
-        </div>
+            <div class="alert alert-primary mt-3" role="alert">
+                Category Successfully Deleted
+            </div>
 
         <meta http-equiv="refresh" content="0; url=kategori.php" />
     <?php
