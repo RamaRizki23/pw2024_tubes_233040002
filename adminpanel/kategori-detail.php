@@ -30,7 +30,7 @@
 
         <div class="mt-5 d-flex justify-content-between">
     <button type="submit" class="btn btn-primary" name="editBtn">Edit</button>
-    <button type="submit" class="btn btn-danger" name="deletetBtn">Delete</button>
+    <button type="submit" class="btn btn-danger" name="deleteBtn">Delete</button>
         </div>
     </form>
 
@@ -96,7 +96,7 @@
                 Category Successfully Deleted
             </div>
 
-        <meta http-equiv="refresh" content="0; url=kategori.php" />
+        <meta http-equiv="refresh" content="2; url=kategori.php" />
     <?php
         }
       else{
