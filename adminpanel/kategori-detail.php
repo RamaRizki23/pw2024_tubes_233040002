@@ -67,27 +67,42 @@
                 }
                 else{
                     echo mysqli_error($con);
-
-                    if($queryDelete){
                         ?>
-                        <div class="alert alert-primary mt-3" role="alert">
-                    Category Successfully Deleted
-</div>
-<meta http-equiv="refresh" content="0; url=kategori.php" />
-
-                        <?php
-                    }
-                    else{
-                        echo mysqli_error($con);
+<?php
                     }
                 }
             }
         }
-    }
-
+    
     if(isset($_POST['deleteBtn'])){
+        $queryCheck = mysqli_query($con, "SELECT * FROM produk WHERE kategori_id='$id'");
+        $dataCount = mysqli_num_rows($queryCheck);
+
+        if($dataCount>0){
+            ?>
+                 <div class="alert alert-primary mt-3" role="alert">
+        Categories cannot be deleted because they are already used in the product
+        </div>
+            <?php
+            die ();
+        }
+        
         $queryDelete = mysqli_query($con, "DELETE FROM kategori WHERE id='$id'");
+        
+        if($queryDelete){
+    ?>
+
+        <div class="alert alert-primary mt-3" role="alert">
+        Category Successfully Deleted
+        </div>
+
+        <meta http-equiv="refresh" content="0; url=kategori.php" />
+    <?php
+        }
+      else{
+          echo mysqli_error($con);
     }
+}
     ?>
     </div>
 </div>

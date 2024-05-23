@@ -1,7 +1,7 @@
 <?php
 require "../koneksi.php";
 
-$query = mysqli_query($con, "SELECT * FROM produk");
+$query = mysqli_query($con, "SELECT a.*, b.nama AS nama_kategori FROM produk a JOIN kategori b ON a.kategori_id=b.id");
 $jumlahProduk = mysqli_num_rows($query);
 
 $queryKategori = mysqli_query($con, "SELECT * FROM kategori");
@@ -70,7 +70,7 @@ form div{
                     <?php
                         while($data=mysqli_fetch_array($queryKategori)){
                     ?>
-                        <option value="<php echo $data['id'] ?>"><?php echo $data['nama']; ?></option>
+                        <option value="<?php echo $data['id'] ?>"><?php echo $data['nama']; ?></option>
                     <?php
                         }
                     ?>
@@ -165,7 +165,7 @@ form div{
     ?>
     </div>
 
-    <div class="mt-3">
+    <div class="mt-3 mb-5">
         <h2>List Product</h2>
 
         <div class="table-responsive mt-5">
@@ -177,6 +177,7 @@ form div{
                     <th>Category</th>
                     <th>Price</th>
                     <th>Stock Availability</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -184,7 +185,7 @@ form div{
                 if($jumlahProduk==0){
                     ?>
                         <tr>
-                        <td colspan=5 class="text-center">No product data</td>
+                        <td colspan=6 class="text-center">No product data</td>
                     </tr>
                  <?php
                 }
@@ -195,9 +196,12 @@ form div{
                         <tr>
                             <td><?php echo $jumlah; ?></td>
                             <td><?php echo $data['nama']; ?></td>
-                            <td><?php echo $data['kategori_id']; ?></td>
+                            <td><?php echo $data['nama_kategori']; ?></td>
                             <td><?php echo $data['harga']; ?></td>
-                            <td><?php echo $data['ketersediaan stok']; ?></td>
+                            <td><?php echo $data['ketersediaan_stok']; ?></td>
+                            <td>
+                                <a href="produk-detail.php?p=<?php echo $data['id'] ?>" class="btn btn-info"><i class="fas fa-search"></i></a>
+                            </td>
                         </tr>
                     <?php
                         $jumlah++;
