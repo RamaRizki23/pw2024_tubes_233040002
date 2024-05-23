@@ -151,7 +151,7 @@ form div{
 
                 if($queryTambah){
         ?>
-                    <div class="alert alert-primary mt-3" role="alert">
+                <div class="alert alert-primary mt-3" role="alert">
                     Product Saved Successfully
 </div>
                     <meta http-equiv="refresh" content="0; url=produk.php" />
@@ -161,8 +161,8 @@ form div{
                     echo mysqli_error($con);
                 }
             }
-         }
-        ?>
+        }
+    ?>
     </div>
 
     <div class="mt-3">
