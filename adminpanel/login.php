@@ -10,6 +10,7 @@ require "../koneksi.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../boostrap/css/boostrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <style>
@@ -25,7 +26,8 @@ require "../koneksi.php";
 
 </style>
 <body>
-    <div class="main d-flex flex-coloumn justifiy-content-center align-item-center">
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="justifiy-content-center align-item-center">
         <div class="login-box p-5 shadow">
             <form action="" method="post">
                 <div>
@@ -48,12 +50,12 @@ require "../koneksi.php";
                 $username = htmlspecialchars($_POST['username']);
                 $password = htmlspecialchars($_POST['password']);
 
-                $query = mysqli_query($con, "SELECT * FROM USERS WHERE username='$username'");
+                $query = mysqli_query($con, "SELECT * FROM users WHERE username='$username'");
                 $countdata = mysqli_num_rows($query);
                 $data = mysqli_fetch_array($query);
 
                 if($countdata>0){
-                    if(password_verify('$password', $data['password'])){
+                    if(password_verify($password, $data['password'])){
                         $_SESSION['$username'] = $data['username'];
                         $_SESSION['login'] = true;
                         header('location: ../adminpanel');
@@ -76,6 +78,7 @@ require "../koneksi.php";
             }
             ?>
         </div>
+    </div>
     </div>
 </body>
 </html>
