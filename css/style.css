@@ -1,0 +1,27 @@
+.warna1 {
+  background-color: #d2649a;
+}
+
+.warna2 {
+  background-color: #f4dfba;
+}
+
+.warna3 {
+  background-color: #ff70ab;
+}
+
+.warna4 {
+  background-color: #ad88c6;
+}
+
+.warna5 {
+  background-color: #e1afd1;
+}
+
+.banner {
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/Mental.PNG);
+}

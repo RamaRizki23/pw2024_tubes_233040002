@@ -78,7 +78,7 @@ border-radius: 15px;
                         <div class="col-6 text-white">
                             <h3 class="fs-2">Product</h3>
                             <p class="fs-4"><?php echo $jumlahProduk;?> Product</p>
-                            <p><a href="product.php" class="text-white no-decoration">See Details</a></p>
+                            <p><a href="produk.php" class="text-white no-decoration">See Details</a></p>
                         </div>
                     </div>
                 </div>
