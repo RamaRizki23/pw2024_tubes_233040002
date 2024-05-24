@@ -136,7 +136,7 @@
         <?php
                     }
                     else{
-                        if($imageFileType != 'jpg' && $imageFileType != 'png' && $imageFileType != 'gif'){
+                        if($imageFileType != 'jpg' && $imageFileType != 'png' && $imageFileType != 'gif' && $imageFileType != 'SVG'){
         ?>
                         <div class="alert alert-primary mt-3" role="alert">
                     Files must be of type JPG,PNG or GIF

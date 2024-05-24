@@ -3,11 +3,11 @@
 }
 
 .warna2 {
-  background-color: #f4dfba;
+  background-color: #c65bcf;
 }
 
 .warna3 {
-  background-color: #ff70ab;
+  background-color: #9c338b;
 }
 
 .warna4 {
@@ -19,9 +19,45 @@
 }
 
 .banner {
-  height: 80vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/Mental.PNG);
+  height: 100vh;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/Health.PNG);
+}
+
+.highlighted-kategori {
+  height: 250px;
+}
+
+.kategori-anxiety {
+  background-size: cover !important;
+  background-position: center !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/anxiety.jpg);
+}
+
+.kategori-filosofi {
+  background-size: cover !important;
+  background-position: center !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/filosofi-teras.jpg);
+}
+
+.kategori-kes-mental {
+  background-size: cover !important;
+  background-position: center !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/kesehatan-mental.jpg);
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: white;
+}
+
+.no-decoration:hover {
+  color: #c65bcf;
+}
+
+.text-harga {
+  font-size: 22px;
+  color: #9c338b;
 }
