@@ -74,12 +74,12 @@
                 <?php while($data = mysqli_fetch_array($queryProduk)){ ?>
                 <div class="col-sm-6 col-md-4 mb-3">
                     <div class="card">
-                        <img src="image/<?php echo $data['foto']; ?>" class="card-img-top" alt="...">
+                        <img src="image/<?php echo $data['foto']; ?>" class="card-img-top" alt="<?php echo $data['nama']; ?>">
                         <div class="card-body">
-                            <h4 class="card-title">The Fighting Anxiety</h4>
-                            <p class="card-text text-truncate">This book is suitable for those of you who want to fight your anxiety.</p>
-                            <p class="card-text text-harga">Rp.7000</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h4 class="card-title"><?php echo $data['nama']; ?></h4>
+                            <p class="card-text text-truncate"><?php echo $data['detail']; ?></p>
+                            <p class="card-text text-harga">Rp.<?php echo number_format($data['harga'], 0, ',', '.'); ?></p>
+                            <a href="detail_produk.php?id=<?php echo $data['id']; ?>" class="btn warna4">View Details</a>
                         </div>
                     </div>
                 </div>
