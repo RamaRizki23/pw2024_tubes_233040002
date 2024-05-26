@@ -31,19 +31,22 @@
 }
 
 .kategori-anxiety {
-  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
   background-position: center !important;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/anxiety.jpg);
 }
 
 .kategori-filosofi {
-  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
   background-position: center !important;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/filosofi-teras.jpg);
 }
 
 .kategori-kes-mental {
-  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
   background-position: center !important;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/kesehatan-mental.jpg);
 }
