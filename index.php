@@ -76,7 +76,7 @@ $resultProduk = $queryProduk->get_result();
                 <?php while($data = $resultProduk->fetch_assoc()){ ?>
                 <div class="col-sm-6 col-md-4 mb-3">
                     <div class="card">
-                        <img src="image/<?php echo ($data['foto']); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($data['nama']); ?>">
+                        <img src="image/<?php echo ($data['foto']); ?>" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
                         <div class="card-body">
                             <h4 class="card-title"><?php echo ($data['nama']); ?></h4>
                             <p class="card-text text-truncate"><?php echo ($data['detail']); ?></p>
