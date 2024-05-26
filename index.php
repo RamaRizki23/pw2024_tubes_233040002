@@ -2,7 +2,7 @@
 require "koneksi.php";
 
 // Secure query using prepared statements
-$queryProduk = $con->prepare("SELECT id, nama, harga, foto, detail FROM produk LIMIT 5");
+$queryProduk = $con->prepare("SELECT id, nama, harga, foto, detail FROM produk LIMIT 6");
 $queryProduk->execute();
 $resultProduk = $queryProduk->get_result();
 ?>
