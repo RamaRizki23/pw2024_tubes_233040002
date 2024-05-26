@@ -1,7 +1,6 @@
 <?php
 require "koneksi.php";
 
-// Secure query using prepared statements
 $queryProduk = $con->prepare("SELECT id, nama, harga, foto, detail FROM produk LIMIT 6");
 $queryProduk->execute();
 $resultProduk = $queryProduk->get_result();
@@ -23,7 +22,7 @@ $resultProduk = $queryProduk->get_result();
     <!-- Banner -->
     <div class="container-fluid banner d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1>Drugstore and Articles</h1>
+            <h1>Drugstore, Books and Articles</h1>
             <h3>What are you looking for?</h3>
             <div class="col-md-8 offset-md-2">
                 <form method="get" action="produk.php">
@@ -72,8 +71,9 @@ $resultProduk = $queryProduk->get_result();
     <div class="container-fluid py-5">
         <div class="container text-center">
             <h3>Products</h3>
+
             <div class="row mt-5">
-                <?php while($data = $resultProduk->fetch_assoc()){ ?>
+                <?php while($data = mysqli_fetch_array($queryProduk)){ ?>
                 <div class="col-sm-6 col-md-4 mb-3">
                     <div class="card h-100">
                         <div class="image-box">
@@ -89,8 +89,12 @@ $resultProduk = $queryProduk->get_result();
                 </div>
                 <?php } ?>
             </div>
+            <a class="btn btn-outline-secondary mt-3" href="produk.php">See More</a>
         </div>
     </div>
+
+    <!-- footer -->
+    <?php require "footer.php" ?>
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="fontawesome/js/all.min.js"></script>
