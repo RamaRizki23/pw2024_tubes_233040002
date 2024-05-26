@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 23, 2024 at 06:34 AM
+-- Generation Time: May 26, 2024 at 04:01 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -40,7 +40,8 @@ INSERT INTO `kategori` (`id`, `nama`) VALUES
 (1, 'Obat'),
 (2, 'Vitamin & Suplemen'),
 (3, 'Ibu & anak'),
-(4, 'Kecantikan &amp; Perawatan diri');
+(4, 'Kecantikan &amp; Perawatan diri'),
+(5, 'Buku');
 
 -- --------------------------------------------------------
 
@@ -63,7 +64,12 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id`, `kategori_id`, `nama`, `harga`, `foto`, `detail`, `ketersediaan_stok`) VALUES
-(1, 1, 'ra', 12000, 'NkQrZM10eviiejxNHdJz.jpg', 'adsadaafasgshs', 'tersedia');
+(9, 5, 'The Fighting Anxiety.pdf', 7000, '8ELdYGEDqINFLPPwGVwD.jpg', 'This book is suitable for those of you who are or want to fight your anxiety', 'tersedia'),
+(10, 5, 'Memilih Pulih', 64000, 'MHMGHdHjgMKCnK9EspFc.jpg', 'This book invites us to look clearly again: How did the problem arise in the first place and undermine our confidence in being able to rise? Because to recover, an extraordinarily long and simultaneous process is required.', 'tersedia'),
+(11, 5, 'Me, Myself, and Mental Health', 58000, '47f5FILsOgTKjwZ1YBEb.jpg', 'In this book, you will understand more deeply:\r\n1. What is mental health and why is it important?\r\n2. Adolescent mental processes\r\n3. Problems often faced by teenagers\r\n4. Practical tips for mental health for teenagers\r\n5. Self-actualization for teenagers', 'tersedia'),
+(12, 5, 'Filosofi Teras', 85000, 'ZOTgoq59UHzjWooUS6n0.jpg', 'This book reminds us that although there are many things in life we ​​cannot control, we always have control over how we respond to them.', 'tersedia'),
+(13, 5, 'Kesehatan Mental Perspektif Psikologis dan Agama', 67000, '6Lt8YG1XFjgsrRRWmQcb.jpg', 'This book is able to present discussions related to human mentality from basic to complex things in a coherent and easy to understand manner.', 'tersedia'),
+(14, 5, 'Kesehatan Mental Konsep dan Penerapan', 71000, 'UY4x2Z8TUeWpLDRviynz.jpg', '                        This book discusses the basic concepts of health and the scope of mental health, views on mental health and mental disorders and their classification, biological dimensions of mental health, psychological dimensions of mental health, socio-cultural dimensions of mental health, environmental dimensions of mental health, historical treatment of mental health, prevalence in mental health, mental health of children to the elderly, families, sex education for teenagers, women in society and families, mental health in schools, needs, mental programs and evaluations, mental health in developing countries, mental health programs and evaluations.                    ', 'tersedia');
 
 -- --------------------------------------------------------
 
@@ -116,13 +122,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`
