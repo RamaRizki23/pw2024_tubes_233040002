@@ -70,8 +70,8 @@
 }
 
 .image-box img {
-  height: 100%;
-  width: 100px;
-  object-fit: cover;
-  object-position: center;
+  height: 100% !important;
+  width: auto !important;
+  object-fit: initial !important;
+  object-position: center !important;
 }
