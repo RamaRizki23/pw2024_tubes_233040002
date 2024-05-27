@@ -9,7 +9,7 @@
     }
     // get product by kategori
     else if(isset($_GET['kategori'])){
-        $queryGetKategoriId = mysqli_query($con, "SELECT id FROM kategori WHERE nama='$_GET[kategori]'");
+        $queryGetKategoriId = mysqli_query($con, "SELECT id FROM kategori WHERE nama=" . urldecode($_GET['kategori']) . "");
         $kategoriId = mysqli_fetch_array($queryGetKategoriId);
 
         $queryProduk = mysqli_query($con, "SELECT * FROM produk WHERE kategori_id='$kategoriId[id]'");
@@ -48,7 +48,7 @@
             <div class="col-lg-3 mb-5">
                 <ul class="list-group">
                     <?php while($kategori = mysqli_fetch_array($queryKategori)){ ?>
-                       <a class="no-decoration" href="produk.php?kategori=<?php echo $kategori['nama']; ?>">
+                       <a class="no-decoration" href="produk.php?kategori=<?php echo urlencode($kategori['nama']); ?>">
                             <li class="list-group-item"><?php echo $kategori['nama']; ?></li>
                        </a>
                     <?php } ?>
@@ -57,8 +57,9 @@
             <div class="col-lg-9">
                 <h3 class="text-center mb-3">Product</h3>
                 <div class="row">
+                    <?php while($produk = mysqli_fetch_array($queryProduk)){ ?>
                     <div class="col-md-4 mb-4">
-                    <div class="card h-100">
+                        <div class="card h-100">
                             <div class="image-box">
                                 <img src="image/anxiety.jpg" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
                             </div>
@@ -70,71 +71,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                    <div class="card h-100">
-                            <div class="image-box">
-                                <img src="image/anxiety.jpg" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Whatever</h4>
-                                <p class="card-text text-truncate">Whatever</p>
-                                <p class="card-text text-harga">Rp.12323</p>
-                                <a href="produk-detail.php?nama=gfdtrdt" class="btn warna4 text-white">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="card h-100">
-                            <div class="image-box">
-                                <img src="image/anxiety.jpg" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Whatever</h4>
-                                <p class="card-text text-truncate">Whatever</p>
-                                <p class="card-text text-harga">Rp.12323</p>
-                                <a href="produk-detail.php?nama=gfdtrdt" class="btn warna4 text-white">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="card h-100">
-                            <div class="image-box">
-                                <img src="image/anxiety.jpg" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Whatever</h4>
-                                <p class="card-text text-truncate">Whatever</p>
-                                <p class="card-text text-harga">Rp.12323</p>
-                                <a href="produk-detail.php?nama=gfdtrdt" class="btn warna4 text-white">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="card h-100">
-                            <div class="image-box">
-                                <img src="image/anxiety.jpg" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Whatever</h4>
-                                <p class="card-text text-truncate">Whatever</p>
-                                <p class="card-text text-harga">Rp.12323</p>
-                                <a href="produk-detail.php?nama=gfdtrdt" class="btn warna4 text-white">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="card h-100">
-                            <div class="image-box">
-                                <img src="image/anxiety.jpg" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Whatever</h4>
-                                <p class="card-text text-truncate">Whatever</p>
-                                <p class="card-text text-harga">Rp.12323</p>
-                                <a href="produk-detail.php?nama=gfdtrdt" class="btn warna4 text-white">View Details</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
