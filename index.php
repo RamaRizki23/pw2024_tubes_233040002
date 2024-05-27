@@ -73,11 +73,11 @@ $resultProduk = $queryProduk->get_result();
             <h3>Products</h3>
 
             <div class="row mt-5">
-                <?php while($data = mysqli_fetch_array($queryProduk)){ ?>
+                <?php while($data = mysqli_fetch_array($resultProduk)){ ?>
                 <div class="col-sm-6 col-md-4 mb-3">
                     <div class="card h-100">
                         <div class="image-box">
-                        <img src="image/<?php echo ($data['foto']); ?>" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
+                            <img src="image/<?php echo ($data['foto']); ?>" class="card-img-top" alt="<?php echo ($data['nama']); ?>">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title"><?php echo ($data['nama']); ?></h4>
@@ -89,7 +89,7 @@ $resultProduk = $queryProduk->get_result();
                 </div>
                 <?php } ?>
             </div>
-            <a class="btn btn-outline-secondary mt-3" href="produk.php">See More</a>
+            <a class="btn btn-outline-secondary mt-3 p-3 fs-4" href="produk.php">See More</a>
         </div>
     </div>
 

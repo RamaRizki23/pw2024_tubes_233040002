@@ -6,12 +6,12 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item me-3">
-          <a class="nav-link" href="../adminpanel">Home</a>
+          <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item me-3">
-          <a class="nav-link" href="kategori.php">Category</a>
+          <a class="nav-link" href="tentang-kami.php">About Us</a>
         </li>
         <li class="nav-item me-3">
           <a class="nav-link" href="produk.php">Product</a>
