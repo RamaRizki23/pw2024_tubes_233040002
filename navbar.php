@@ -11,9 +11,6 @@
           <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item me-3">
-          <a class="nav-link" href="tentang-kami.php">About Us</a>
-        </li>
-        <li class="nav-item me-3">
           <a class="nav-link" href="produk.php">Product</a>
         </li>
         <li class="nav-item dropdown">

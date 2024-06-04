@@ -84,7 +84,14 @@
   color: #fff;
 }
 
-.banner-produk {
+.banner2 {
   height: 40vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image/Health.PNG) no-repeat center / cover;
+}
+
+.produk-terkait-image {
+  height: 100% !important;
+  width: auto !important;
+  object-fit: initial !important;
+  object-position: center !important;
 }
