@@ -22,7 +22,7 @@ $resultProduk = $queryProduk->get_result();
     <!-- Banner -->
     <div class="container-fluid banner d-flex align-items-center">
         <div class="container text-center text-white">
-            <h1>Drugstore, Books and Articles</h1>
+            <h1>Drugstore and Books</h1>
             <h3>What are you looking for?</h3>
             <div class="col-md-8 offset-md-2">
                 <form method="get" action="produk.php">

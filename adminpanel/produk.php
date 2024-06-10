@@ -13,7 +13,10 @@ function generateRandomString($length = 10){
     for ($i = 0; $i < $length; $i++){
         $randomString .= $characters[rand(0, $charactersLength - 1)];
     }
-    return $randomString;
+    if(isset($randomString)){
+        return $randomString;
+    }
+    // return $randomString;
 }
 ?>
 
@@ -133,7 +136,7 @@ form div{
         <?php
                     }
                     else{
-                        if($imageFileType != 'jpg' && $imageFileType != 'png' && $imageFileType != 'gif' && $imageFileType != 'SVG'){
+                        if($imageFileType != 'jpg' && $imageFileType != 'png' && $imageFileType != 'gif' && $imageFileType != 'SVG' && $imageFileType != 'jpeg'){
         ?>
                         <div class="alert alert-primary mt-3" role="alert">
                     Files must be of type JPG,PNG or GIF

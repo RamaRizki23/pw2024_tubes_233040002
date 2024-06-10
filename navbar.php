@@ -13,16 +13,6 @@
         <li class="nav-item me-3">
           <a class="nav-link" href="produk.php">Product</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Article
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Mental Health</a></li>
-            <li><a class="dropdown-item" href="#">Healthy Lifestyle</a></li>
-            <li><a class="dropdown-item" href="#">Sex Education</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>

@@ -9,6 +9,7 @@
     }
     // get product by kategori
     else if(isset($_GET['kategori'])){
+        // var_dump(urldecode($_GET['kategori']));
         $queryGetKategoriId = mysqli_query($con, "SELECT id FROM kategori WHERE nama = '" . urldecode($_GET['kategori']) . "'");
         $kategoriId = mysqli_fetch_array($queryGetKategoriId);
 
@@ -50,7 +51,7 @@
             <div class="col-lg-3 mb-5">
                 <ul class="list-group">
                     <?php while($kategori = mysqli_fetch_array($queryKategori)){ ?>
-                       <a class="no-decoration" href="produk.php?kategori=<?php echo $kategori['nama']; ?>">
+                       <a class="no-decoration" href="produk.php?kategori=<?php echo urlencode($kategori['nama']) ?>">
                             <li class="list-group-item"><?php echo $kategori['nama']; ?></li>
                        </a>
                     <?php } ?>
