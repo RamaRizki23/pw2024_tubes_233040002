@@ -61,7 +61,7 @@ $resultProduk = $queryProduk->get_result();
 
     <!-- About Us -->
     <div class="container-fluid warna5 py-5">
-        <div class="container text-center">
+        <div class="container">
             <h3>About Us</h3>
             <p class="fs-5 mt-3">Welcome to the NeoFarma Website. This website is intended to sell medicines and also books and articles online. For those of you who want to know about mental health and more, this website is very suitable for you. There are also several medicines sold legally here.</p>
         </div>
